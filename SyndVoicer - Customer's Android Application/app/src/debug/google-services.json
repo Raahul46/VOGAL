@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "663413281362",
+    "firebase_url": "https://synduser-aa827.firebaseio.com",
+    "project_id": "synduser-aa827",
+    "storage_bucket": "synduser-aa827.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663413281362:android:55c6df20feef8c09",
+        "android_client_info": {
+          "package_name": "com.example.barath.syndvoicer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "663413281362-mlvc3javv285pkjbib9bcuajfqos8uk3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKu4uQ90zG5bMsoiFAbfMCbsE7WdkGZbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "663413281362-mlvc3javv285pkjbib9bcuajfqos8uk3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

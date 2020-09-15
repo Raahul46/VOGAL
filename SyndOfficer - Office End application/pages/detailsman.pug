@@ -1,0 +1,149 @@
+
+<<!DOCTYPE html>
+
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Grievance
+        link(rel="stylesheet", href="/css/bootstrap.css")
+        link(rel="stylesheet", href="/css/font.css")
+        link(rel="stylesheet", href="/css/bootstrap.min.css")
+        link(rel="stylesheet", href="/css/grave.css")
+        style   
+            p   
+                display: inline-block
+            
+
+        script(src='/js/bootstrap.js')
+        script(src='/js/jquery.js')
+        script(src='/js/propper.js')
+        script(src='/js/details.js')
+
+          
+        
+    body
+        a(href='/login' id="2") 
+             h5(style="text-align:right") Log out
+        img(src="/UI/syndicate-bank-logo1.png" alt="" height="125px" width="480px" style="padding-left:40px")
+        br
+        br
+        ul(style="padding-left: 40px" id='ul')
+            li(id="li")
+                a(id="lia" href="/manager" style="color:inherit;text-decoration: none;")
+                    img(src="/UI/610387-200.png" style=" height:30px; width:30px")
+                    font(size="4" face="Cambria (Headings)" style="padding-left:10px")
+                        b HOME
+            li(id="li" style="padding-left:10px")
+                a(id="lia" href="/manager/grievance" style="color:inherit;text-decoration: none;")
+                    img(src="/UI/Headset-512.png" style="height:30px;width:30px")
+                    font(size="4" face="Cambria (Headings)" style="padding-left: 10px")
+                        b GRIEVANCE
+        div(id="box" style="padding:40px 40px 40px 40px;")
+            h1
+                u REPORT :
+            br
+            h5 
+                b COMPLAINT ID :
+                p #{compid[0].comp_id}
+            br
+            h5 
+                b DOMAIN :  
+                p #{compid[0].domain} 
+            br
+            h5 
+                b DESCRIPTION :  
+                p #{compid[0].description}
+                b
+                    p Emotion : #{compid[0].emotion} 
+            br
+            br
+            br
+            h1
+               u CUSTOMER DETAILS :
+            br
+            h5 
+                b ACCOUNT HOLDER NAME : 
+                p #{compid[0].name}
+            br
+            h5 
+                b ACCOUNT NUMBER :  
+                p #{compid[0].accno} 
+            br
+            h5 
+                b E-MAIL :  
+                p #{compid[0].emailid} 
+            br
+            h5 
+                b PHONE NUMBER :   
+                p #{compid[0].number}
+            br
+            br
+            h1 
+            
+                u TRANSACTION :
+            br
+            table(border=3 style="width:100%")
+                tr
+                    td 
+                        b  DATE
+                    td 
+                        b TIME 
+                    td 
+                        b TRANSACTION
+                    td 
+                        b AMOUNT 
+                tr
+                    td 17th August 2019
+                    td 09:40 PM
+                    td Paid for order 
+                    td 500
+                tr  
+                    td 19th August 2019
+                    td 10:00 AM
+                    td Booking tickets in SPI
+                    td 300
+                tr 
+                    td 2nd September 2019
+                    td 01:20 PM
+                    td Transfered money to customer
+                    td 1000 
+                tr
+                    td 5th September 2019
+                    td 09:42 AM
+                    td Using UPI to transfer money
+                    td 100
+                tr
+                    td 7th September 2019
+                    td 11:40 PM
+                    td Money to restaraunt
+                    td 200 
+                        
+            br
+            br
+            form(action="/man/status" method="POST" name=form)
+                h4  
+                    if compid[0].status==1
+                        b STATUS : 
+                        font(color='green') COMPLETED
+                    else
+                        b STATUS : 
+                        font(color='red') NOT COMPLETED
+                    br
+                    br
+                    select(name="drop")
+                        option() Progress
+                        option(value=`1+${compid[0].comp_id}`) Completed
+                        option(value=`0+${compid[0].comp_id}`) Not Completed
+                    br
+                    br
+                    input(type="submit" value="Submit" name=comp)
+                      
+                    
+            
+            
+
+
+                
+                

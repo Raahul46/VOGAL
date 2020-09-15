@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerifyMobile">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text"
+        android:text="Please Enter Your OTP"
+        android:textColor="#000"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:layout_marginTop="30dp"/>
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:id="@+id/otpone"
+        android:inputType="number"
+        android:layout_marginTop="20dp"
+        android:hint="One Time Verification Password"
+        android:paddingLeft="15dp"
+        android:drawableLeft="@drawable/ic_smartphone"
+        android:background="@drawable/editround"
+        android:textColor="#fff"
+        android:textColorHint="#FFF"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/text"/>
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login"
+        android:text="VERIFY"
+        android:layout_below="@+id/otpone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"></Button>
+
+
+</RelativeLayout>
